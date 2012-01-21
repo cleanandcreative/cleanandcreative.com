@@ -1,0 +1,6 @@
+rvm use --create 1.9.3-HEAD@cleanandcreative.com
+
+# install bundler if it doesn't exist
+if ! command -v bundle ; then
+  gem install bundler
+fi

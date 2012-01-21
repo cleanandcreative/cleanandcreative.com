@@ -1,0 +1,31 @@
+%nav
+  %ul
+    %li
+      = link_to "Themes"
+    %li
+      = link_to "Graphics"
+    %li
+      = link_to "Photos"
+    %li
+      = link_to "Videos"
+    %li
+      = link_to "Free"
+      
+  %ul
+    %li
+      = link_to "Our Mission"
+    %li
+      = link_to "Blog"
+
+  %ul
+    %li
+      = link_to "Signup"
+    %li
+      = link_to "Login"
+    %li
+      = link_to "Help"
+      
+#search
+  = form_tag do |f|
+    = text_field_tag :q, params[:q], :placeholder => "Search..." 
+    = submit_tag 'Search'

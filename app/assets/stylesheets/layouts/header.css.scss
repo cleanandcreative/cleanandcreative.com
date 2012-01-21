@@ -1,0 +1,48 @@
+
+header {
+    
+    position: fixed;
+    width: 100%;
+    top: 0;
+    
+    background-color: #2d2d2d;
+    border-bottom: 1px solid #000000;
+
+    nav {
+        float:left; 
+        
+        &, a, a:visited, a:link {
+            color: #fbfaf7;
+        }
+        a, a:visited, a:link {
+            text-decoration: none;
+        }
+        a:hover, a:focus {
+            text-decoration: underline;
+        }
+
+        > ul > li > a {
+            line-height: 2em;
+            padding: 0 1em;
+        }
+        > ul > li:last-child > a {
+            border-right: 1px dotted #898b8b;
+        }
+        
+        
+        
+        > ul, > ul > li {
+            float:left; 
+        }
+        
+        
+        
+        text-transform: uppercase;
+        
+    }
+    
+    #search {
+        float:right;
+    }
+    
+}
