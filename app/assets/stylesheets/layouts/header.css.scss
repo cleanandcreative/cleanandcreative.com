@@ -5,6 +5,10 @@ header {
     width: 100%;
     top: 0;
     
+    + div {
+        margin-top: 33px;
+    }
+    
     background-color: #2d2d2d;
     border-bottom: 1px solid #000000;
 

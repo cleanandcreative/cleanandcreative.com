@@ -1,0 +1,70 @@
+%section#slides
+
+  %article.summary
+    %h1 An Online Marketplace Advocating for Good
+    %p 
+      Buy Website Themes, Graphic Elements, Photos,
+      %br
+      and Video Sets. Every product donates
+      %br 
+      to help a global injustice.
+    
+    .slidenav
+      Learn More
+      = link_to "Next", "#"
+      
+  %article.products
+    %h1 Some of Our Products
+    %ul.gallery
+      %li.photography
+        %h2 Photography
+        %p Change the world through art. We’ve been doing this for years, but now we have a greater chance to reach the needs of the people.
+      %li.video
+        %h2 Video
+        %p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+      %li.themes
+        %h2 Themes
+        %p Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla.
+    .slidenav
+      = link_to "Next", "#"
+        
+  %article.charity
+    %h1 Let's Make a Big Difference
+    %p 
+      %span.percentage 10% of every profit helps fund a global need
+    %p 
+      Change the world through art. We’ve been doing this for years, but now we have a greater chance to reach the needs of the people.
+    .slidenav
+      = link_to "Next", "#"
+        
+  %article.contact
+    %h1 Connect with Us
+    %ul
+      %li.twitter
+        %h2.title Twitter Feed
+        Maecenas sed diam eget risus varius blandit sit amet non magna.
+      %li.social
+        %h2.title Social Connection
+        = link_to "RSS", "#", :class => :rss
+        = link_to "Twitter", "#", :class => :twitter
+        = link_to "Facebook", "#", :class => :facebook
+        = link_to "YouTube", "#", :class => :youtube
+        = link_to "Vimeo", "#", :class => :vimeo
+        = link_to "Theme Forest", "#", :class => :theme_forest
+      %li.newsletter
+        %h2.title Monthly Newsletter
+        %p Subscribe to our newsletters directly to your email account. We’ll be sure to update you with our latest projects, freebies, and blog posts.
+        = form_tag "#" do |f|
+          = text_field :newsletter_signup, :email, :placeholder => "giggity@example.com" 
+          = submit_tag 'Submit'
+      %li.contact
+        %ul.cities
+          %li Portland
+          %li Los Angeles
+          %li Denver
+        %p 
+          We’re proud to be Americans knowing anything is possible. If you’ve got a question or comment please email us:
+          = mail_to "cleanandcreative@gmail.com", "cleanandcreative [at] gmail.com", :encode => "hex"
+    .foot
+      &copy; 2011 Clean & Creative - an Online Marketplace Advocating for Good
+    
