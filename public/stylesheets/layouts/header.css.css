@@ -1,0 +1,43 @@
+/* line 2, ../../../app/assets/stylesheets/layouts/header.css.scss */
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  background-color: #2d2d2d;
+  border-bottom: 1px solid #000000;
+}
+/* line 16, ../../../app/assets/stylesheets/layouts/header.css.scss */
+header nav {
+  float: left;
+  text-transform: uppercase;
+}
+/* line 19, ../../../app/assets/stylesheets/layouts/header.css.scss */
+header nav, header nav a, header nav a:visited, header nav a:link {
+  color: #fbfaf7;
+}
+/* line 22, ../../../app/assets/stylesheets/layouts/header.css.scss */
+header nav a, header nav a:visited, header nav a:link {
+  text-decoration: none;
+}
+/* line 25, ../../../app/assets/stylesheets/layouts/header.css.scss */
+header nav a:hover, header nav a:focus {
+  text-decoration: underline;
+}
+/* line 29, ../../../app/assets/stylesheets/layouts/header.css.scss */
+header nav > ul > li > a {
+  line-height: 2em;
+  padding: 0 1em;
+}
+/* line 33, ../../../app/assets/stylesheets/layouts/header.css.scss */
+header nav > ul > li:last-child > a {
+  border-right: 1px dotted #898b8b;
+}
+/* line 39, ../../../app/assets/stylesheets/layouts/header.css.scss */
+header nav > ul, header nav > ul > li {
+  float: left;
+}
+/* line 49, ../../../app/assets/stylesheets/layouts/header.css.scss */
+header #search {
+  float: right;
+}

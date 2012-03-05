@@ -1,0 +1,22 @@
+$site_width: 960px;
+
+html, body { 
+  height: 100%; 
+  margin: 0; 
+  padding: 0;
+}
+
+#main, #container {
+//  height: 100%;
+  margin: 0; padding: 0;
+//  position: relative;
+}
+
+
+#container {
+  width: $site_width;
+}
+
+#main {
+//  position: relative;
+}

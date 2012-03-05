@@ -1,0 +1,99 @@
+//@import "compass/utilities/sprites";
+
+$home_slideshow-sprite-dimensions: true;
+@import "sprites/home_slideshow/*.png";
+//@include all-home_slideshow-sprites;
+
+
+section#slides {
+  
+  position: absolute; 
+  top: 0; left: 0;
+  margin: 0; padding: 0;
+  
+  height: 100%; width: 100%;
+  overflow: hidden;
+  
+  article {
+    display:block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    
+    margin: 0; padding: 0;
+  }
+  
+  
+  
+  
+  article.summary {
+    
+    background-image: url( "../bgs/cement.jpg" );
+    -webkit-background-size: 100%;
+       -moz-background-size: 100%;
+            background-size: 100%;
+
+    text-align: center;
+    
+//    > * { position: absolute; }
+    
+    > a.home {
+      position: absolute;
+      text-indent: -9999px;
+      @include home_slideshow-sprite(cclogo);
+      right: 50%;
+      margin-right: 260px;
+      top: 4em;
+    }
+    
+    > .content {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      width: 800px;
+      margin: 0 auto;
+      margin-left: -400px;
+      > * { padding: 0; margin: 0; }
+      
+      h1 {
+        text-indent: -9999px;
+        @include home_slideshow-sprite(summary_title);
+        margin: 2em 0;
+      }
+      
+      p {
+        font-size: 17px;
+        line-height: 33px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,.3);
+      }
+      
+    }
+    
+    > .slidenav {
+      font-family: "KlavikaMediumPlain";
+      text-transform: uppercase;
+      font-size: 18px;
+      
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      margin: 0 auto;
+      width: 200px;
+      margin-left: -100px;
+      text-align: center;
+      a {
+        display:block;
+        text-indent: -9999px;
+        @include home_slideshow-sprite(down);
+        &:hover, &:focus {
+          @include home_slideshow-sprite(down_over);
+        }
+        margin: 16px auto
+      }
+    }
+
+  }
+  
+    
+}

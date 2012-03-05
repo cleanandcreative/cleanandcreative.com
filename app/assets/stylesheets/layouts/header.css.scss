@@ -1,19 +1,27 @@
 
 header {
     
+    font-family: "KlavikaMediumPlain";
+    
     position: fixed;
-    width: 100%;
+    z-index: 100;
+//    width: 100%;
     top: 0;
     
     + div {
-        margin-top: 33px;
+//        margin-top: 33px;
     }
     
     background-color: #2d2d2d;
     border-bottom: 1px solid #000000;
 
-    nav {
-        float:left; 
+    padding: 0 50%;
+  
+
+    > nav {
+      width: 960px;
+      float:left; 
+      margin-left: -480px;
         
         &, a, a:visited, a:link {
             color: #fbfaf7;
@@ -46,7 +54,12 @@ header {
     }
     
     #search {
-        float:right;
+      position: absolute;
+      top: 0;
+      
+      width: 960px;
+      margin-left: -480px;
+      text-align: right;
     }
     
 }
