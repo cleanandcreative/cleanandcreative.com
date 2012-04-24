@@ -1,5 +1,7 @@
 %section#slides
-  %article.summary
+  = link_to "Top", "#", :class => "top"
+  
+  %article#summary
     %a.home{ :href => root_path }
       Clean &amp; Creative
     .content
@@ -13,9 +15,9 @@
     
     .slidenav
       Learn More
-      = link_to "Next", "#"
+      = link_to "Next", "#products"
       
-  %article.products
+  %article#products
     %h1 Some of Our Products
     %ul.gallery
       %li.photography
@@ -28,38 +30,59 @@
         %h2 Themes
         %p Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla.
     .slidenav
-      = link_to "Next", "#"
+      = link_to "Next", "#charity"
         
-  %article.charity
+  %article#charity
     %h1 Let's Make a Big Difference
     %p 
-      %span.percentage 10% of every profit helps fund a global need
-    %p 
-      Change the world through art. We’ve been doing this for years, but now we have a greater chance to reach the needs of the people.
-    .slidenav
-      = link_to "Next", "#"
+      %span.title 10% of every profit helps fund a global need
+      %span.body  
+        Change the world through art. We’ve been doing this for years, but now we have a greater chance to reach the needs of the people.
+        = link_to "Find out more", "#"
         
-  %article.contact
+    .slidenav
+      = link_to "Next", "#contact"
+        
+  %article#contact
     %h1 Connect with Us
     %ul
       %li.twitter
-        %h2.title Twitter Feed
-        Maecenas sed diam eget risus varius blandit sit amet non magna.
+        %h2.title 
+          Twitter Feed
+          = link_to "Stay Up To Date On Twitter", "#"
+        %p
+          Maecenas sed diam eget risus varius blandit sit amet non magna.
+          
       %li.social
-        %h2.title Social Connection
-        = link_to "RSS", "#", :class => :rss
-        = link_to "Twitter", "#", :class => :twitter
-        = link_to "Facebook", "#", :class => :facebook
-        = link_to "YouTube", "#", :class => :youtube
-        = link_to "Vimeo", "#", :class => :vimeo
-        = link_to "Theme Forest", "#", :class => :theme_forest
+        %h2.title 
+          Social Connection
+          = link_to "Find Us Online", "#"
+          
+        %ul
+          %li.rss= link_to "RSS", "#"
+          %li.twitter= link_to "Twitter", "#"
+          %li.google= link_to "Google Plus", "#"
+          %li.facebook= link_to "Facebook", "#"
+          %li.youtube= link_to "YouTube", "#"
+          %li.vimeo= link_to "Vimeo", "#"
+          / %li.theme_forest= link_to "Theme Forest", "#"
+          %li.pinterest= link_to "Pinterest", "#"
+          
       %li.newsletter
-        %h2.title Monthly Newsletter
+        %h2.title 
+          Monthly Newsletter
+          = link_to "Receive Our Newsletter", "#"
+          
         %p Subscribe to our newsletters directly to your email account. We’ll be sure to update you with our latest projects, freebies, and blog posts.
         = form_tag "#" do |f|
           = text_field :newsletter_signup, :email, :placeholder => "giggity@example.com" 
           = submit_tag 'Submit'
+          
       %li.contact
+        %h2.title 
+          Contact Us
+          = link_to "Tell Us What You Think", "#"
+
         %ul.cities
           %li Portland
           %li Los Angeles
@@ -67,6 +90,14 @@
         %p 
           We’re proud to be Americans knowing anything is possible. If you’ve got a question or comment please email us:
           = mail_to "cleanandcreative@gmail.com", "cleanandcreative [at] gmail.com", :encode => "hex"
+          
     .foot
-      &copy; 2011 Clean & Creative - an Online Marketplace Advocating for Good
+      &copy; #{Time.new.year} Clean & Creative - an Online Marketplace Advocating for Good
+    
+    
+- content_for :javascripts do
+  :coffeescript
+    new Slideshow el for el in $('#slides')
+    
+    
     

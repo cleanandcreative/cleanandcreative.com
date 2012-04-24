@@ -1,0 +1,52 @@
+
+@mixin home_slideshow-sprite($sprite_name) {
+  
+  background: url(/assets/sprites/home_slideshow.png) no-repeat;
+  
+  @if $sprite_name == "cclogo" {
+    background-position: 0 0;
+    height: 136px;
+    width: 155px;
+  }
+  
+  @if $sprite_name == "summary_title" {
+    background-position: 0 -235px;
+    height: 57px;
+    width: 805px;
+  }
+  
+  @if $sprite_name == "down" {
+    background-position: 0 -337px;
+    height: 45px;
+    width: 46px;    
+  }
+  
+  @if $sprite_name == "down_over" {
+    background-position: 0 -292px;
+    height: 45px;
+    width: 46px;    
+  }
+  
+  @if $sprite_name == "down_white" {
+    background-position: 0 -382px;
+    height: 45px;
+    width: 46px;    
+  }
+
+
+  @if $sprite_name == "products_title" {
+    background-position: 0 -427px;
+    height: 47px;
+    width: 404px;    
+  }
+
+  @if $sprite_name == "xx" {
+    background-position: 0 -474px;
+    height: 47px;
+    width: 404px;    
+  }
+
+
+  
+}
+

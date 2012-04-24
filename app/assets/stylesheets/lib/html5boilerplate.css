@@ -33,7 +33,7 @@ html { font-size: 100%; -webkit-overflow-scrolling: touch; -webkit-tap-highlight
 
 body { margin: 0; font-size: 13px; line-height: 1.231; }
 
-body, button, input, select, textarea { font-family: Helvetica, sans-serif; color: #2d2d2d; }
+body, button, input, select, textarea { font-family: "Trebuchet MS", Helvetica, sans-serif; color: #2d2d2d; }
 
 /* 
  * These selection declarations have to be separate
@@ -44,6 +44,10 @@ body, button, input, select, textarea { font-family: Helvetica, sans-serif; colo
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
 
 /* =============================================================================
    Links

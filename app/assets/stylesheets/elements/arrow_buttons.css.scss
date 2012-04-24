@@ -1,0 +1,18 @@
+// @import 'sprites/arrows';
+$arrows-sprite-dimensions: true;
+@import "sprites/arrows/*.png";
+
+
+@mixin medium-arrow-link($normal_color, $over_color) {
+  @extend .sprite;
+  display:inline-block;
+  margin: 2px 3px 0 3px;
+  
+  $normal_color: #{$normal_color};
+  @include arrows-sprite(medium_right_#{$normal_color});
+  
+  &:focus, &:hover {
+    @include arrows-sprite(medium_right_#{$over_color});
+  }
+  
+}
